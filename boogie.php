@@ -19,12 +19,14 @@ class boogs implements Plugin{
 }
 
 public function init(){
-$this->api->console->register("boogie","Boogie!",array($this, "boogie"));
-$this->api->ban->cmdWhitelist("boogie");
+	$this->api->console->register("boogie","Boogie!",array($this, "boogie"));
+	$this->api->ban->cmdWhitelist("boogie");
 }
 
 public function boogie($cmd){
-$this->api->chat->broadcast("[Boogie] You are all boogies.");
+	$username = $issuer->username;
+	$this->api->chat->broadcast("[Boogie] You are all boogies.");
+	$this->api->chat->sendTo(false, "[Boogie] You are the boogiest of them all.")
 }
 
 public function __destruct(){
