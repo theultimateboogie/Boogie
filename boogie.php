@@ -23,7 +23,7 @@ public function init(){
 	$this->api->ban->cmdWhitelist("boogie");
 }
 
-public function boogie($cmd){
+public function boogie($cmd, $args, $issuer){
 	$username = $issuer->username;
 	$this->api->chat->broadcast("[Boogie] You are all boogies.");
 	$this->api->chat->sendTo(false, "[Boogie] You are the boogiest of them all.", $username);
