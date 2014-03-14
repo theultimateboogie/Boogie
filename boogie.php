@@ -26,7 +26,7 @@ public function init(){
 public function boogie($cmd){
 	$username = $issuer->username;
 	$this->api->chat->broadcast("[Boogie] You are all boogies.");
-	$this->api->chat->sendTo(false, "[Boogie] You are the boogiest of them all.", $username)
+	$this->api->chat->sendTo(false, "[Boogie] You are the boogiest of them all.", $username);
 }
 
 public function __destruct(){
